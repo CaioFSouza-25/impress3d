@@ -185,4 +185,9 @@ ul {
         display: none;
     }
 
+    #home {
+        padding-top: 6rem;
+
+    }
+
 }
