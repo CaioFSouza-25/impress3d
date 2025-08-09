@@ -1,4 +1,12 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+    --fonte-menu:"inter",sans-serif;
+    --fonte-corpo:"inter",sans-serif;
+    --fonte-titulo:"League Spartan",sans-serif;
+}
+
 /* Definir cores tema Dark */
 :root,
 :root[data-theme="dark"] {
@@ -8,7 +16,7 @@
     --cor-texto: #8f8f8f;
 
     --cor-icone: #ffa927;
-    
+
     --cor-link: #f0f0f0;
     --cor-hover: #e9e9e9;
 
@@ -25,7 +33,7 @@
     --cor-texto: #808080;
 
     --cor-icone: #12a3f7;
-    
+
     --cor-link: #8f8f8f;
     --cor-hover: #0b0b0f;
 
@@ -40,7 +48,7 @@ html[data-theme="light"] .logo {
 
 
 * {
-    margin: 0;  
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 
@@ -61,7 +69,12 @@ ul {
     list-style: none;
 }
 
-#header { 
+h1{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+#header {
     display: flex;
     flex-wrap: row wrap;
     justify-content: space-between;
@@ -89,10 +102,12 @@ ul {
     text-transform: uppercase;
     font: size 0.75rem; ; /*tamanho da fonte*/
     font-weight: 600;
-
+    font-family: var(--fonte-menu);
+    font-style: normal;
+    text-rendering: optimizeLegibility;
 }
 
-.menu-link.active .menu-texto, 
+.menu-link.active .menu-texto,
 .menu-link:hover .menu-texto {
     color: var(--cor-hover);
 }
@@ -161,29 +176,54 @@ ul {
     transition: transform 0.3s ease-in-out;
 }
 .menu-mobile.active{
-    transform: translateX(0%); 
-
+    transform: translateX(0%);
 }
 
 .menu-mobile .menu-lista{
     width: 100%;
     text-align: center;
     padding-top: 1rem;
-
-
 }
 .menu-mobile .menu-link{
     display: inline-block;
     font-size: 1rem;
     padding: 1rem 0;
-    
+}
+
+/*flexbox*/
+#home{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+/*
+.main-content .video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video iframe{
+    aspect-ratio:  16/9;
+    width: 50%;
 }
 /* Medidas Responsivas */
 
 @media (min-width: 768px) {  /* A partir de 768px ate o infinito */
 
     .menu-desktop {
-        display: flex; 
+        display: flex;
         min-width: 30%;
     }
 
