@@ -220,6 +220,49 @@ li {
     flex-direction: column;
     gap: 1.5rem;
 }
+
+.menu-social {
+    gap: 1.2rem;
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: var(--cor-titulo);
+    cursor: pointer;
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    gap: 0.625rem;
+}
+
+.btn-primario {
+    border: 1px solid var(--cor-titulo);
+}
+
+.btn:hover {
+    background: var(--cor-hover);
+    transform: scale(1.01);
+    transition: ease-in-out 0.5s;
+
+}
+
+.btn span,
+.btn i {
+    color: var(--cor-titulo);
+    text-transform: uppercase;
+}
+
+.btn:hover span,
+.btn:hover i {
+    color: var(--cor-fundo);
+    transition: ease-in-out 0.3s;
+}
 /*
 .main-content .video{
     display: flex;
